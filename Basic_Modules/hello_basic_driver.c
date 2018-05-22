@@ -55,5 +55,10 @@ printk("%02d:%02d:%02d:%06d\n", hour, minute, second, now.tv_usec);
 module_init(hello_init);
 module_exit(hello_exit);
 
-
+/*  
+ *  This module uses /dev/testdevice.  The MODULE_SUPPORTED_DEVICE macro might
+ *  be used in the future to help automatic configuration of modules, but is 
+ *  currently unused other than for documentation purposes.
+    MODULE_SUPPORTED_DEVICE("testdevice");
+*/
 
